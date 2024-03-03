@@ -29,9 +29,9 @@ form.onsubmit = (event) => {
 
   if (weightOrHeightIsNotANumber) {
     AlertError.open()
-    inputWeight.value = inputHeight.value = ''
+    inputWeight.value = inputWeight.value = ''
     inputWeight.focus()
-    inputHeight.value = inputWeight.value = ''
+    inputHeight.value = inputHeight.value = ''
     return
   }
 
@@ -39,8 +39,6 @@ form.onsubmit = (event) => {
 
   const result = calculateIMC(weight, height)
   displayResultMessage(result)
-  inputHeight.value = inputWeight.value = ''
-
-  inputWeight.focus()
-  inputHeight.value = inputWeight.value = ''
+  inputWeight.value = inputWeight.value = ''
+  inputHeight.value = inputHeight.value = ''
 }
